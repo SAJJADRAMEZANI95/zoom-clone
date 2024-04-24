@@ -16,7 +16,7 @@ type MeetingModalProps = {
   onClose: () => void;
   title: string;
   className?: string;
-  buttonText: string;
+  buttonText?: string;
   handleClick: () => void;
   children?: React.ReactNode;
   image?: string;
@@ -37,7 +37,7 @@ const MeetingModal = ({
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogTrigger>Open</DialogTrigger>
-      <DialogContent className="flex w-full max-w-[520px] flex-col gap-6 border-none bg-dark-1 px-6 py-9 text-white">
+      <DialogContent className="flex w-full max-w-[520px]  flex-col gap-6 border-none bg-dark-1 px-6 py-9 pb-8 text-white">
         <div className="flex flex-col gap-6">
           {image && (
             <div>
