@@ -2,19 +2,19 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
-import { Toaster } from "@/components/ui/toaster"
-import '@stream-io/video-react-sdk/dist/css/styles.css';
-import 'react-datepicker/dist/react-datepicker.css';
+import { Toaster } from "@/components/ui/toaster";
+import "@stream-io/video-react-sdk/dist/css/styles.css";
+import "react-datepicker/dist/react-datepicker.css";
 
-
-const inter = Inter({ subsets: ["latin"] });
+//const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Yoom | Meeting and Collaboration",
-  description: "Yoom is a video conferencing and collaboration platform built for teams.",
-  icons:{
-    icon:"/icons/logo.svg"
-  }
+  description:
+    "Yoom is a video conferencing and collaboration platform built for teams.",
+  icons: {
+    icon: "/icons/logo.svg",
+  },
 };
 
 export default function RootLayout({
@@ -26,9 +26,9 @@ export default function RootLayout({
     <html lang="en">
       <ClerkProvider
         appearance={{
-          layout:{
+          layout: {
             logoImageUrl: "/icons/yoom-logo.svg",
-            socialButtonsVariant:'iconButton'
+            socialButtonsVariant: "iconButton",
           },
           variables: {
             colorText: "#fff",
@@ -39,10 +39,10 @@ export default function RootLayout({
           },
         }}
       >
-        <body className={`${inter.className} bg-dark-2`}>
+        <body className={"bg-dark-2"}>
           {children}
-          <Toaster/>
-          </body>
+          <Toaster />
+        </body>
       </ClerkProvider>
     </html>
   );
